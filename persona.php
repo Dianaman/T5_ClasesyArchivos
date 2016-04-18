@@ -31,8 +31,8 @@
 
 		abstract function Hablar($idioma);
 
-		function ToString(){
-			return "$this->_dni - $this->_apellido - $this->_nombre - $this->_sexo";
+		function __toString(){
+			return $this->_dni."-".$this->_apellido."-".$this->_nombre."-".$this->_sexo;
 		}
 	}
 ?>
