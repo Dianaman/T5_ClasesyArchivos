@@ -12,6 +12,7 @@
 		$sexo = $_POST['sexo'];
 		$legajo = $_POST['legajo'];
 		$sueldo = $_POST['sueldo'];
+		$foto = $_FILES['foto']['name'];
 
 		if($nombre == "" || $apellido == "" || $sexo == "" || $legajo == "" || $sueldo == "")
 		{
@@ -24,6 +25,7 @@
 			echo "Error: ingrese valores numéricos en dni, legajo y sueldo";
 			die();
 		}
+
 
 		$unEmpleado = new Empleado($nombre, $apellido, $dni, $sexo, $legajo, $sueldo);
 		//echo $unEmpleado->("Inglés");
