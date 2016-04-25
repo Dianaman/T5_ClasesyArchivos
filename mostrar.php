@@ -9,9 +9,11 @@
 		$archivo = fopen("empleados.txt", "r");
 		while(!feof($archivo)){
 			$linea = fgets($archivo);
-			$empleado = explode("-", $linea);
-			$unEmpleado = new Empleado($empleado[0], $empleado[1], $empleado[2], $empleado[3], $empleado[4], $empleado[5]);
-			echo $unEmpleado;
+			if($linea!=""){
+				$empleado = explode("-", $linea);
+				$unEmpleado = new Empleado($empleado[0], $empleado[1], $empleado[2], $empleado[3], $empleado[4], $empleado[5], $empleado[6]);
+				echo $unEmpleado;
+			}
 		}
 		fclose($archivo);
 	?>
