@@ -68,7 +68,13 @@
 		echo $unEmpleado;
 
 		/* Guardado del empleado en archivo */
+		/*
 		$archivo = fopen("empleados.txt", "a");
 		fwrite($archivo, $unEmpleado."\n");
 		fclose($archivo);
+		*/
+
+		$unaFabrica = new Fabrica("La Fabrica SRL");
+		$unaFabrica->AgregarEmpleado($unEmpleado);
+		Fabrica::Guardar()
 	?>
